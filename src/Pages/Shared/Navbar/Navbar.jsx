@@ -53,7 +53,7 @@ const Navbar = () => {
                                             <img className="rounded-full" src={user.photoURL} />
                                         </div>
                                         <div className="w-10 mx-4 ">
-                                            <Link to="/myProfile/:id">Profile</Link>
+                                            <Link to="/myProfile">Profile</Link>
                                         </div>
 
                                         <button onClick={handleLogout} className="btn btn-outline btn-warning mx-2">LogOut</button>

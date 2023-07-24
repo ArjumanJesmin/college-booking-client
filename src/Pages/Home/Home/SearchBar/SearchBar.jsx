@@ -6,7 +6,7 @@ import { FaSearch } from 'react-icons/fa';
 const SearchBar = ({ setResult }) => {
     const [input, setInput] = useState("");
     const fetchData = (value) => {
-        fetch("http://localhost:5000/colleges")
+        fetch("https://college-booking-server-one.vercel.app/colleges")
             .then(res => res.json())
             .then(data => {setResult(data);
                 const result = data.filter((user) => {

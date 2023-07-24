@@ -13,7 +13,7 @@ const Home = () => {
   const [selectedCollege, setSelectedCollege] = useState(null);
 
   const handleCollegeClick = () => {
-    fetch(`http://localhost:5000/colleges/${_id}`)
+    fetch(`https://college-booking-server-one.vercel.app/colleges/${_id}`)
       .then(res => res.json())
       .then(data => setSelectedCollege(data))
   }
