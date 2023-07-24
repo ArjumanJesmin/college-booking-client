@@ -5,7 +5,7 @@ import moment from 'moment/moment';
 
 const Featured = () => {
     return (
-        <div className="">
+        <div className="my-6">
             <h2 className='text-center text-5xl font-bold text-yellow-500 pb-2'> Our College </h2>
             <div className="featured-item bg-fixed text-white ">
 

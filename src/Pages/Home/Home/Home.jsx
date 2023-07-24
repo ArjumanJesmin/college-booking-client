@@ -6,6 +6,7 @@ import CollegeCard from './CollegeCard/CollegeCard';
 import SliderPage from './SliderPage/SliderPage';
 import Gallery from './Gallery';
 import Featured from './Featured/Featured';
+import GraduatePictures from './GraduatePictures';
 
 // import Featured from './Featured/Featured';
 
@@ -27,6 +28,7 @@ const Home = () => {
       <div>
         <SliderPage />
         <Gallery/>
+        <GraduatePictures/>
         <Featured />
         
       </div>

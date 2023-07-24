@@ -6,7 +6,7 @@ import Rate from "../../../../Rate";
 const MyCollege = () => {
 
     const [classes, setClasses] = useState([]);
-    const [rating, setRating] = useState(0)
+    const [ratings, setRatings] = useState({});
 
 
 
@@ -15,6 +15,13 @@ const MyCollege = () => {
             .then(res => res.json())
             .then(data => setClasses(data))
     }, [])
+
+    const handleRatingChange = (classId, rating) => {
+        setRatings(prevRatings => ({
+            ...prevRatings,
+            [classId]: rating
+        }));
+    };
 
 
     return (
@@ -47,8 +54,11 @@ const MyCollege = () => {
                                 <td><img className="w-12 rounded-full" src={classData.image} alt="image" /></td>
                                 <td>
                                     <div>
-                                        <Rate rating={rating} onRating={(rate) =>setRating(rate)}/>
-                                        <p>Rating -{rating} </p>
+                                        <Rate
+                                            rating={ratings[classData._id] || 0} 
+                                            onRating={(rate) => handleRatingChange(classData._id, rate)} 
+                                        />
+                                        <p>Rating - {ratings[classData._id] || 0}</p> 
                                     </div>
                                 </td>
                             </tr>
