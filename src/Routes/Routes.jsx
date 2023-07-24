@@ -13,6 +13,7 @@ import CollegeName from "../Pages/Home/Home/CollegeSection/CollegeName";
 import MyCollege from "../Pages/Home/Home/MyCollege/MyCollege";
 import PrivateRoute from "./PrivateRoute";
 import MyProfile from "../Pages/Home/MyProfile/MyProfile";
+import ResearchPapers from "../Pages/Home/Home/ResearchPapers";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: '/collegeName',
         element: <CollegeName />
+      },
+      {
+        path: '/ResearchPapers',
+        element: <ResearchPapers />
       },
       {
         path: '/admissionForm',
